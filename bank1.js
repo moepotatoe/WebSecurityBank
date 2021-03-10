@@ -424,7 +424,10 @@ Bank.prototype.withdrawUI = function(customer)
 		
 		// Get the withdraw amount
 		let withdrawAmount = readline.question("Please enter the withraw amount: ");
-		
+		if(isNaN(withdrawAmount)){
+		console.log("incorrect amount. please try again.");
+		return;
+		}
 		// Deposit the money	
 		account.withdraw(withdrawAmount);			
 		
