@@ -48,7 +48,7 @@ Account.prototype.deposit = function(amount) { this.acctBalance  = this.acctBala
 
 		// Withdraws money from the account
 		// @param amount - the amount to withdraw
-Account.prototype.withdraw = function(amount){ this.acctBalance = this.acctBalance - amount; };
+Account.prototype.withdraw = function(amount){ this.acctBalance = this.acctBalance - parseInt(amount); };
 
 		// Prints the account information
 Account.prototype.printAcct = function()
