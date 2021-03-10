@@ -106,7 +106,7 @@ class Bank {
 	// The key is the customer user name. The value is the Customer object
 	// containing the customer information
 	this.customers = {};
-	
+
 	// The welcome banner ad!
 	for(let i = 0; i < 3; i++)
 	{
@@ -140,7 +140,7 @@ Bank.prototype.createAndAddCustomer = function(userName, userPassword)
 		
 		// Save the customer
 		this.customers[customer.getUserName()] = customer;
-	}
+	};
 	
 	// ----------------------------------------------
 	// Allows the user to enroll in the bank (the UI)
@@ -157,7 +157,7 @@ Bank.createCustomerUI = function()
 		this.createAndAddCustomer(userName, userPassword);
 		
 		console.log("Created account for ", userName);
-	}
+	};
 
 	// -----------------------------------------------
 	// The user action selection menu
@@ -222,7 +222,7 @@ Bank.prototype.userActionMenuUI = function(customer)
 			}
 		}
 		while(choice != 7);
-	}
+	};
 	
 	
 	// -------------------------------------------
@@ -247,7 +247,7 @@ Bank.prototype.viewAccounts = function(customer)
 			// Next account
 			accountNum += 1;
 		}
-	} 
+	}; 
 		
 	// ------------------------------------------------------------
 	// Master choice menu
@@ -273,7 +273,7 @@ Bank.prototype.masterChoice = function()
 				this.createCustomerUI();
 			
 		}while(choice != 1 && choice != 2);
-	}
+	};
 	
 	// -------------------------------------------------------------
 	// The login menu
@@ -301,7 +301,7 @@ Bank.prototypoe.loginUI = function()
 		
 		// Show the user menu
 		this.userActionMenuUI(customer);
-	}
+	};
 	
 			
 	// -----------------------------------------------
@@ -325,7 +325,7 @@ Bank.prototype.login = function(userName, userPassword)
 		}
 		
 		return match;
-	}
+	};
 	
 	// ----------------------------------------------------
 	// Adds a new account (e.g., savings or checking for the 
@@ -345,7 +345,7 @@ Bank.prototype.createAccount = function(customer, acctName, initialDeposits, typ
 		
 		// Add account to the user
 		customer.addAccount(account);
-	}	
+	};	
 	
 	
 	// ----------------------------------------------------
@@ -373,7 +373,7 @@ Bank.prototype.openAccountUI = function(customer)
 		
 		// The account name
 		this.createAccount(customer, accountName, parseFloat(initialDeposit), accountType);
-	}
+	};
 
 	// ------------------------------------------------------
 	// The UI for depositing money
@@ -402,7 +402,7 @@ Bank.prototype.depositUI = function(user)
 		
 		console.log("Updated account information: ");
 		account.printAcct();		
-	}
+	};
 
 	// ------------------------------------------------------
 	// The UI for withdrawing the money
@@ -427,7 +427,7 @@ Bank.prototype.withdrawUI = function(customer)
 		// Show the updated account information	
 		console.log("Updated account information: ");
 		account.printAcct();
-	}
+	};
 
 	
 	// -----------------------------------------------------
@@ -467,7 +467,7 @@ Bank.prototype.transferUI = function(customer)
 		console.log("\n");
 		dstAccount.printAcct();
 
-	}
+	};
 		
 	// ---------------------------------------------
 	// Shows all the user accounts
@@ -488,7 +488,7 @@ Bank.prototype.showAccounts = function(user)
 		{
 			console.log(acctNum, account.getName(), " ", account.getBalance())
 		}
-	}
+	};
 	
 	// --------------------------------------------
 	// Returns the customer based on the user name
@@ -498,7 +498,7 @@ Bank.prototype.showAccounts = function(user)
 Bank.prototype.getCustomer = function(userName) 
 	{ 
 		return this.customers[userName]; 
-	}
+	};
 	
 	// Opens the bank for business.
 Bank.prototype.start = function()
@@ -511,8 +511,8 @@ Bank.prototype.start = function()
 			// Clear screen
 			clearScreeen();
 		}
-	}
-}
+	};
+
 
 // ---- Sample Test Code --------
 
