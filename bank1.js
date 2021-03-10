@@ -44,7 +44,7 @@ Account.prototype.getAccountType = function() { return this.type; };
 
 		// Deposits money to the account
 		// @param amount - the amount to deposit
-Account.prototype.deposit = function(amount) { this.acctBalance  = this.acctBalance +  amount; };
+Account.prototype.deposit = function(amount) { this.acctBalance  = this.acctBalance +  parseInt(amount); };
 
 		// Withdraws money from the account
 		// @param amount - the amount to withdraw
@@ -396,7 +396,10 @@ Bank.prototype.depositUI = function(user)
 		
 		// Get the deposit amount
 		let depositAmount = readline.question("Please enter the deposit amount: ");
-		
+		if(isNaN(depositAmount)){
+		console.log("incorrect amount. please try again.");
+		return;
+		}
 		// Deposit the money	
 		account.deposit(depositAmount);			
 		
@@ -456,7 +459,10 @@ Bank.prototype.transferUI = function(customer)
 		
 		// Get the transfer amount
 		let transferAmount = readline.question("Please enter the transfer amount: ");
-		
+		if(isNaN(transferAmount)){
+		console.log("incorrect amount. please try again.");
+		return;
+		}
 		// Withdraw the money from the source account
 		srcAccount.withdraw(transferAmount);
 		
