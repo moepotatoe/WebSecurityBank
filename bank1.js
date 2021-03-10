@@ -112,17 +112,18 @@ class Bank {
 	{
 		console.log("Welcome to ", name, "!\n");
 	}
-		
+	
+	let j = 0;
 	// Initialize the customer map
-	while(i < initCustomerList.length)
+	while(j < initCustomerList.length)
 	{
 		// Get the customer
-		customer = initCustomerList[i];
+		customer = initCustomerList[j];
 
 		this.customers[customer.getUserName()] = customer;
 		
 		// Next user!	
-		i += 1;	
+		j += 1;	
 	}
 }
 }
@@ -236,7 +237,7 @@ Bank.prototype.viewAccounts = function(customer)
 		let accounts = customer.getAccounts();
 		
 		// The account counter
-		let accountNum === 1;
+		let accountNum = 1;
 			
 		// Print the accounts
 		for(account of accounts)
