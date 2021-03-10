@@ -145,7 +145,7 @@ Bank.prototype.createAndAddCustomer = function(userName, userPassword)
 	// ----------------------------------------------
 	// Allows the user to enroll in the bank (the UI)
 	// ----------------------------------------------
-Bank.createCustomerUI = function()
+Bank.prototype.CreateCustomerUI = function()
 	{
 		// Create user name
 		let userName = readline.question("Please pick a user name: ");
