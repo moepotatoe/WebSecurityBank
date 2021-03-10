@@ -371,7 +371,10 @@ Bank.prototype.openAccountUI = function(customer)
 		
 		// The initial deposit	
 		let initialDeposit = readline.question("Please enter the deposit amount: ");
-		
+		if(isNaN(depositAmount)){
+		console.log("incorrect amount. please try again.");
+		return;
+		}
 		// The account name
 		this.createAccount(customer, accountName, parseFloat(initialDeposit), accountType);
 	};
