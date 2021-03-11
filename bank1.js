@@ -256,7 +256,7 @@ Bank.prototype.viewAccounts = function(customer)
 Bank.prototype.masterChoice = function()
 	{
 
-	
+			let choice;	
 		do
 		{
 			console.log("What would you like to do?");
@@ -264,7 +264,7 @@ Bank.prototype.masterChoice = function()
 			console.log("2. Create Account\n");
 			
 			// Get the choice
-			let choice = readline.question("Choice: ");	
+			choice = readline.question("Choice: ");	
 			
 
 			// Login
