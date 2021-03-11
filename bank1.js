@@ -122,7 +122,7 @@ class Bank {
 		this.customers[customer.getUserName()] = customer;
 		
 		// Next user!	
-		j += 1;	
+		i += 1;	
 	}
 }
 }
