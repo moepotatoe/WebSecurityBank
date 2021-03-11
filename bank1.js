@@ -113,16 +113,17 @@ class Bank {
 		console.log("Welcome to ", name, "!\n");
 	}
 	
+	let j = 0;
 	// Initialize the customer map
-	while(i = 0; i < initCustomerList.length)
+	while (j < initCustomerList.length)
 	{
 		// Get the customer
-		customer = initCustomerList[i];
+		let customer = initCustomerList[j];
 
 		this.customers[customer.getUserName()] = customer;
 		
 		// Next user!	
-		i += 1;	
+		j += 1;	
 	}
 }
 }
