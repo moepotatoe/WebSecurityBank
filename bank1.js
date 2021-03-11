@@ -82,7 +82,7 @@ Customer.prototype.getAccounts = function() { return this.accounts; };
 	
 	// Add account
 	// @param account - the account
-Customer.prototype.addAcount = function(account) { this.accounts.push(account); };
+Customer.prototype.addAccount = function(account) { this.accounts.push(account); };
 	
 	// Returns the account based on the account index
 	// @param acctIndex - the account index
@@ -113,12 +113,11 @@ class Bank {
 		console.log("Welcome to ", name, "!\n");
 	}
 	
-	let j = 0;
 	// Initialize the customer map
-	while(j < initCustomerList.length)
+	while(i = 0; i < initCustomerList.length)
 	{
 		// Get the customer
-		customer = initCustomerList[j];
+		customer = initCustomerList[i];
 
 		this.customers[customer.getUserName()] = customer;
 		
