@@ -262,7 +262,7 @@ Bank.prototype.masterChoice = function()
 			console.log("2. Create Account\n");
 			
 			// Get the choice
-			let choice === readline.question("Choice: ");	
+			let choice = readline.question("Choice: ");	
 			
 
 			// Login
@@ -279,7 +279,7 @@ Bank.prototype.masterChoice = function()
 	// -------------------------------------------------------------
 	// The login menu
 	// -------------------------------------------------------------
-Bank.prototypoe.loginUI = function()
+Bank.prototype.loginUI = function()
 	{
 		do
 		{
