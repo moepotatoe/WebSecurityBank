@@ -181,7 +181,7 @@ Bank.prototype.userActionMenuUI = function(customer)
 
 			// Accept input
 			let choice = readline.question("Choice: ");
-			
+			choice = parseInt(choice);	
 			// Decide what to do
 			
 			// Deposit	
@@ -256,7 +256,7 @@ Bank.prototype.viewAccounts = function(customer)
 Bank.prototype.masterChoice = function()
 	{
 
-			let choice;	
+		
 		do
 		{
 			console.log("What would you like to do?");
