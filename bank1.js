@@ -255,6 +255,8 @@ Bank.prototype.viewAccounts = function(customer)
 	// ------------------------------------------------------------
 Bank.prototype.masterChoice = function()
 	{
+
+	
 		do
 		{
 			console.log("What would you like to do?");
